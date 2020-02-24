@@ -4,15 +4,19 @@
  * @Author: zhoubo
  * @Date: 2020-02-24 22:30:46
  * @LastEditors: zhoubo
- * @LastEditTime: 2020-02-25 00:10:07
+ * @LastEditTime: 2020-02-25 00:11:45
  * @FilePath: ~@index.js
  */
 const express = require('express');
+const multer  = require('multer')
+const cors = require('cors')
+const upload = multer({ dest: 'uploads/' })
+// const path = require('path')
 
 const app = express()
 
 app.get('/', (req, res, next)=> {
-  res.send('hello')
+  res.send('hello g-api-serve')
 })
 app.options('/upload', cors())
 app.put('/upload', cors(), upload.single('file'), function (req, res, next) {
