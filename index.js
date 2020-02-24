@@ -4,7 +4,7 @@
  * @Author: zhoubo
  * @Date: 2020-02-24 22:30:46
  * @LastEditors: zhoubo
- * @LastEditTime: 2020-02-25 00:11:45
+ * @LastEditTime: 2020-02-25 00:22:26
  * @FilePath: ~@index.js
  */
 const express = require('express');
@@ -35,7 +35,7 @@ app.get('/upload/:key', cors(), function(req, res, next){
   })
 })
 
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log('Example app listening on port 3000!')
 })
